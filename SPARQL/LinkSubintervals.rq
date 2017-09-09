@@ -1,0 +1,26 @@
+PREFIX i: <https://www.imi.med.fau.de/AllenSparql/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+CONSTRUCT { 
+
+	?super i:hasSubInterval ?sub .
+  
+} WHERE {
+   	
+  	?super rdf:type i:Superinterval .
+	?super i:hasStartDateUnix ?startdate1_ux .
+	?super i:hasEndDateUnix ?enddate1_ux .
+  	?super i:hasPatient ?pat .
+  	?super i:hasConcept ?sameConcept .
+
+	?sub i:hasStartDateUnix ?startdate2_ux .
+	?sub i:hasEndDateUnix ?enddate2_ux .
+  	?sub i:isMarked "aggregated" .
+	?sub i:hasPatient ?pat .
+  	?sub i:hasConcept ?sameConcept .
+  
+	FILTER (?startdate2_ux >= ?startdate1_ux) .
+	FILTER (?enddate2_ux <= ?enddate1_ux) .
+  
+}

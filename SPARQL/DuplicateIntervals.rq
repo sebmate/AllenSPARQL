@@ -1,0 +1,23 @@
+PREFIX i: <https://www.imi.med.fau.de/AllenSparql/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+CONSTRUCT { 
+
+	?interval i:hasStartDateUnix ?startdate1_ux .
+	?interval i:hasEndDateUnix ?enddate1_ux .
+  	?interval i:hasPatient ?pat .
+  	?interval i:hasConcept "#OUT#" .
+    ?interval i:hasStartDate ?startdate1 .
+    ?interval i:hasEndDate ?enddate2 .
+  
+} WHERE {
+  	
+	?interval i:hasStartDateUnix ?startdate1_ux .
+	?interval i:hasEndDateUnix ?enddate1_ux .
+  	?interval i:hasPatient ?pat .
+	?interval i:hasConcept "#IN#" .
+    ?interval i:hasStartDate ?startdate1 .
+    ?interval i:hasEndDate ?enddate2 .
+  
+}

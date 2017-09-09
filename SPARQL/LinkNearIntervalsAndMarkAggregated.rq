@@ -1,0 +1,36 @@
+PREFIX i: <https://www.imi.med.fau.de/AllenSparql/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+CONSTRUCT { 
+
+  ?interval1 i:near ?interval2 .
+  ?interval1 i:isMarked "aggregated" .
+  ?interval2 i:isMarked "aggregated" .
+  
+} WHERE {
+  
+  # must be the same patient:
+  ?interval1 i:hasPatient ?pat .
+  ?interval2 i:hasPatient ?pat .
+  
+  # and the same concept:
+  ?interval1 i:hasConcept ?sameConcept .
+  ?interval2 i:hasConcept ?sameConcept .
+   
+  # both interval concepts must have start and end dates:
+  ?interval1 i:hasStartDate ?startdate1 .
+  ?interval1 i:hasEndDate ?enddate1 .
+  ?interval2 i:hasStartDate ?startdate2 .
+  ?interval2 i:hasEndDate ?enddate2 .
+  
+  # and Unix time stamps (for computation)
+  ?interval1 i:hasStartDateUnix ?startdate1_ux .
+  ?interval1 i:hasEndDateUnix ?enddate1_ux .
+  ?interval2 i:hasStartDateUnix ?startdate2_ux .
+  ?interval2 i:hasEndDateUnix ?enddate2_ux .
+   
+  # temporal filtering:
+  FILTER (?startdate2_ux >= ?enddate1_ux) .
+  FILTER (?startdate2_ux - ?enddate1_ux <= #LINKTHRES#) .
+  
+}

@@ -1,0 +1,20 @@
+Installation
+============
+
+AllenSPARQL was created with NetBeans 8.1, but it should also compile directly with
+Maven. If you can't open the project in NetBeans, make sure that you have the Maven
+plugins installed.
+
+To build the source code, run "mvn install".
+
+It might be necessary to install the jar file for D2RQ manually beforehand. To do this,
+download D2RQ 0.8.1 and run (inside the lib directory):
+
+mvn install:install-file -Dfile=d2rq-0.8.1.jar -DgroupId=d2rq -DartifactId=d2rq -Dversion=0.8.1 -Dpackaging=jar
+
+AllenSPARQL uses a slightly modified version of "sagecell-client.py" (see: https://github.com/sagemath/sagecell/blob/master/contrib/sagecell-client/
+sagecell-client.py). To support deriving inferences via SageMathCell, install Python and make sure that that "sagecell-client.py" works on your system. Make sure to follow
+the documentation of the script, as it requires the installation of two Python 
+libraries.
+
+

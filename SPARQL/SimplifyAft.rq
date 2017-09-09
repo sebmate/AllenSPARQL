@@ -1,0 +1,13 @@
+PREFIX i: <https://www.imi.med.fau.de/AllenSparql/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+CONSTRUCT { 
+
+  ?interval1 i:bef ?interval2 .
+  ?interval2 i:aft ?interval1 .
+  
+} WHERE {
+
+  ?interval1 i:before|i:meets ?interval2 .
+  
+}

@@ -1,0 +1,825 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:map="http://www.imi.med.uni-erlangen.de/#"
+    xmlns:db="http://www.imi.med.uni-erlangen.de/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:vocab="https://www.imi.med.fau.de/AllenSparql/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xml:base="http://www.imi.med.uni-erlangen.de/" > 
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/2/1/%40/2/ICM/2017-01-01T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315200</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315140</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/9/1/%40/9/ICM/2017-01-01T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315200</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315140</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2">
+    <rdfs:label>I2B2_17_ALLENTEST.OBSERVATION_FACT_TEMP2</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/2/1/%40/2/ICM/2017-01-02T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401600</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401540</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/4/1/%40/4/ICM/2017-01-02T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401600</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401540</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/5/1/%40/5/ICM/2017-01-03T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483488000</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483487940</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-04T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/8/1/%40/8/ICM/2017-01-02T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401600</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401540</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/4/1/%40/4/ICM/2017-01-01T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315200</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315140</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/12/1/%40/12/ICM/2017-01-01T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315200</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315140</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/12/1/%40/12/ICM/2017-01-02T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315260</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315200</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/9/1/%40/9/ICM/2017-01-01T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483228860</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483228800</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/6/1/%40/6/ICM/2017-01-02T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315260</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315200</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/3/1/%40/3/ICM/2017-01-03T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401660</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401600</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/6/1/%40/6/ICM/2017-01-02T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401600</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401540</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/3/1/%40/3/ICM/2017-01-02T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315260</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315200</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/10/1/%40/10/ICM/2017-01-02T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401600</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401540</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/8/1/%40/8/ICM/2017-01-02T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315260</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315200</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/10/1/%40/10/ICM/2017-01-02T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315260</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315200</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/12/1/%40/12/ICM/2017-01-01T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483228860</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483228800</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/6/1/%40/6/ICM/2017-01-02T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315260</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315200</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/3/1/%40/3/ICM/2017-01-02T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401600</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401540</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/10/1/%40/10/ICM/2017-01-01T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483228860</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483228800</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/4/1/%40/4/ICM/2017-01-02T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401600</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401540</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.imi.med.fau.de/AllenSparql/hasStartDateUnix">
+    <rdfs:label>OBSERVATION_FACT_TEMP2 START_DATE_UNIX</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/8/1/%40/8/ICM/2017-01-02T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401600</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401540</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/10/1/%40/10/ICM/2017-01-01T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315200</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315140</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/2/1/%40/2/ICM/2017-01-01T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483228860</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483228800</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/3/1/%40/3/ICM/2017-01-02T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315260</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315200</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/11/1/%40/11/ICM/2017-01-01T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483228860</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483228800</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.imi.med.fau.de/AllenSparql/hasValue">
+    <rdfs:label>OBSERVATION_FACT_TEMP2 NVAL_NUM</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/13/1/%40/13/ICM/2017-01-03T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401660</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401600</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/6/1/%40/6/ICM/2017-01-02T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401600</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401540</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/4/1/%40/4/ICM/2017-01-01T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483228860</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483228800</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/9/1/%40/9/ICM/2017-01-03T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401660</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401600</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.imi.med.fau.de/AllenSparql/hasNameChar">
+    <rdfs:label>CONCEPT_DIMENSION NAME_CHAR</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/11/1/%40/11/ICM/2017-01-01T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315200</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315140</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/13/1/%40/13/ICM/2017-01-03T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483488000</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483487940</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-04T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/5/1/%40/5/ICM/2017-01-03T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401660</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401600</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/8/1/%40/8/ICM/2017-01-02T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315260</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315200</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/3/1/%40/3/ICM/2017-01-02T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401600</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401540</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/5/1/%40/5/ICM/2017-01-01T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483228860</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483228800</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/9/1/%40/9/ICM/2017-01-02T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401600</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401540</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/10/1/%40/10/ICM/2017-01-02T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401600</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401540</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/7/1/%40/7/ICM/2017-01-02T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315260</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315200</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.imi.med.fau.de/AllenSparql/hasConcept">
+    <rdfs:label>OBSERVATION_FACT_TEMP2 CONCEPT</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/5/1/%40/5/ICM/2017-01-02T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315260</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315200</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/11/1/%40/11/ICM/2017-01-02T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401600</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401540</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/1/1/%40/1/ICM/2017-01-01T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315200</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315140</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/5/1/%40/5/ICM/2017-01-02T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401600</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401540</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/9/1/%40/9/ICM/2017-01-03T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483488000</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483487940</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-04T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/10/1/%40/10/ICM/2017-01-02T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315260</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315200</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/5/1/%40/5/ICM/2017-01-01T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315200</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315140</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/9/1/%40/9/ICM/2017-01-02T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315260</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315200</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/1/1/%40/1/ICM/2017-01-01T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483228860</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483228800</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/11/1/%40/11/ICM/2017-01-03T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401660</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401600</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/13/1/%40/13/ICM/2017-01-01T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315200</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315140</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/4/1/%40/4/ICM/2017-01-02T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315260</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315200</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/8/1/%40/8/ICM/2017-01-03T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401660</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401600</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/11/1/%40/11/ICM/2017-01-03T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483488000</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483487940</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-04T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/8/1/%40/8/ICM/2017-01-03T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483488000</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483487940</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-04T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/7/1/%40/7/ICM/2017-01-02T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401600</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401540</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.imi.med.fau.de/AllenSparql/hasStartDate">
+    <rdfs:label>OBSERVATION_FACT_TEMP2 START_DATE</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/9/1/%40/9/ICM/2017-01-02T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401600</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401540</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.imi.med.fau.de/AllenSparql/hasPatient">
+    <rdfs:label>OBSERVATION_FACT_TEMP2 PATIENT_NUM</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/7/1/%40/7/ICM/2017-01-02T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315260</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315200</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/6/1/%40/6/ICM/2017-01-03T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401660</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401600</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/3/1/%40/3/ICM/2017-01-03T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483488000</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483487940</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-04T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/CONCEPT_DIMENSION/%5Ci2b2%5CA%5C">
+    <vocab:hasNameChar>A</vocab:hasNameChar>
+    <vocab:hasConceptCD>ALLEN:A</vocab:hasConceptCD>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_CONCEPT_DIMENSION"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/5/1/%40/5/ICM/2017-01-02T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315260</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315200</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/12/1/%40/12/ICM/2017-01-02T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401600</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401540</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/6/1/%40/6/ICM/2017-01-03T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483488000</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483487940</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-04T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/2/1/%40/2/ICM/2017-01-02T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315260</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315200</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/5/1/%40/5/ICM/2017-01-02T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401600</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401540</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/11/1/%40/11/ICM/2017-01-02T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315260</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315200</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/13/1/%40/13/ICM/2017-01-01T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483228860</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483228800</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_CONCEPT_DIMENSION">
+    <rdfs:label>I2B2_17_ALLENTEST.CONCEPT_DIMENSION</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.imi.med.fau.de/AllenSparql/hasEndDate">
+    <rdfs:label>OBSERVATION_FACT_TEMP2 END_DATE</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/11/1/%40/11/ICM/2017-01-02T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401600</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401540</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/3/1/%40/3/ICM/2017-01-01T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483228860</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483228800</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/9/1/%40/9/ICM/2017-01-02T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315260</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315200</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/1/1/%40/1/ICM/2017-01-03T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483488000</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483487940</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-04T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.imi.med.fau.de/AllenSparql/hasEndDateUnix">
+    <rdfs:label>OBSERVATION_FACT_TEMP2 END_DATE_UNIX</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/CONCEPT_DIMENSION/%5Ci2b2%5CB%5C">
+    <vocab:hasNameChar>B</vocab:hasNameChar>
+    <vocab:hasConceptCD>ALLEN:B</vocab:hasConceptCD>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_CONCEPT_DIMENSION"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.imi.med.fau.de/AllenSparql/hasConceptCD">
+    <rdfs:label>CONCEPT_DIMENSION CONCEPT_CD</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/3/1/%40/3/ICM/2017-01-01T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315200</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315140</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/7/1/%40/7/ICM/2017-01-02T23:59:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401600</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401540</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T00:00:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T23:59:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/1/1/%40/1/ICM/2017-01-03T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401660</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483401600</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AB/4/1/%40/4/ICM/2017-01-02T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315260</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315200</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>B</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="I2B2_17_ALLENTEST/OBSERVATION_FACT_TEMP2/ALLEN%3AA/11/1/%40/11/ICM/2017-01-02T00:00:00">
+    <vocab:hasEndDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315260</vocab:hasEndDateUnix>
+    <vocab:hasStartDateUnix rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1483315200</vocab:hasStartDateUnix>
+    <vocab:hasEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:01:00</vocab:hasEndDate>
+    <vocab:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42</vocab:hasValue>
+    <vocab:hasStartDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:00:00</vocab:hasStartDate>
+    <vocab:hasConcept>A</vocab:hasConcept>
+    <vocab:hasPatient rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11</vocab:hasPatient>
+    <rdf:type rdf:resource="https://www.imi.med.fau.de/AllenSparql/I2B2_17_ALLENTEST_OBSERVATION_FACT_TEMP2"/>
+  </rdf:Description>
+</rdf:RDF>

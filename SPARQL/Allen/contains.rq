@@ -1,0 +1,36 @@
+PREFIX i: <https://www.imi.med.fau.de/AllenSparql/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+CONSTRUCT { 
+
+  ?interval1 i:contains ?interval2 .
+  ?interval2 i:during ?interval1 .
+    
+} WHERE {
+  
+  # must be the same patient:
+  ?interval1 i:hasPatient ?pat .
+  ?interval2 i:hasPatient ?pat .
+  
+  # Must have Unix time stamps (for computation)
+  ?interval1 i:hasStartDateUnix ?startdate1_ux .
+  ?interval1 i:hasEndDateUnix ?enddate1_ux .
+  ?interval2 i:hasStartDateUnix ?startdate2_ux .
+  ?interval2 i:hasEndDateUnix ?enddate2_ux .
+    
+#  # If "complex aggregation" is selected, also filter per concept:
+#  ?conceptDimension i:hasConceptCD ?sameConcept .
+#  ?conceptDimension i:hasNameChar "#CONCEPTIDENTIFIER#" .
+   
+  # temporal filtering:
+  #FILTER (?startdate2_ux + #UNCERTAINTY# > ?startdate1_ux &&
+  #        ?enddate2_ux - #UNCERTAINTY# < ?enddate1_ux) .
+  
+  FILTER (?startdate2_ux - ?startdate1_ux > #UNCERTAINTY# &&
+          ?enddate1_ux - ?enddate2_ux > #UNCERTAINTY#) .
+  
+  # remove all intervals that have already been processed:
+  FILTER NOT EXISTS { ?interval1 i:isMarked "aggregated" }
+  FILTER NOT EXISTS { ?interval2 i:isMarked "aggregated" }
+  
+}

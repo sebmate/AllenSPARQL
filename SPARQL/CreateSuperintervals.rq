@@ -1,0 +1,57 @@
+PREFIX i: <https://www.imi.med.fau.de/AllenSparql/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+CONSTRUCT { 
+
+  ?newURI i:hasStartDate ?startdate1 .
+  ?newURI i:hasEndDate ?enddate2 .
+  ?newURI i:hasStartDateUnix ?startdate1_ux .
+  ?newURI i:hasEndDateUnix ?enddate2_ux .
+  
+  # The following object will be modified if complex aggregation is selected:
+  ?newURI i:hasConcept ?sameConcept .
+  
+  ?newURI i:hasPatient ?pat .
+  ?newURI rdf:type i:Superinterval .
+    
+} WHERE {
+  
+  # must be the same patient:
+  ?interval1 i:hasPatient ?pat .
+  ?interval2 i:hasPatient ?pat .
+    
+  # and the same concept:
+  ?interval1 i:hasConcept ?sameConcept .
+  ?interval2 i:hasConcept ?sameConcept .
+
+  # both interval concepts must have start and end dates:
+  ?interval1 i:hasStartDate ?startdate1 .
+  ?interval1 i:hasEndDate ?enddate1 .
+  ?interval2 i:hasStartDate ?startdate2 .
+  ?interval2 i:hasEndDate ?enddate2 .
+  
+  # and Unix time stamps (for computation)
+  ?interval1 i:hasStartDateUnix ?startdate1_ux .
+  ?interval1 i:hasEndDateUnix ?enddate1_ux .
+  ?interval2 i:hasStartDateUnix ?startdate2_ux .
+  ?interval2 i:hasEndDateUnix ?enddate2_ux .
+  
+  # create a new URI for the new interval
+  BIND (URI(CONCAT(str(?interval1), "_New")) AS ?newURI).
+
+	{
+		# This is based on code by Joshua Taylor found on https://stackoverflow.com/a/18032019
+		SELECT ?interval1 ?interval2 WHERE {
+		?interval1 i:near* ?midA .
+      	FILTER NOT EXISTS { ?x i:near ?interval1 }
+		?midA i:near ?midB .
+		?midB i:near* ?interval2 .
+      	FILTER NOT EXISTS { ?interval2 i:near ?y }		  
+		} GROUP BY ?interval1 ?interval2 
+	}
+}
+
+
+
+
