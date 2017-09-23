@@ -18,19 +18,10 @@ CONSTRUCT {
   ?interval2 i:hasStartDateUnix ?startdate2_ux .
   ?interval2 i:hasEndDateUnix ?enddate2_ux .
     
-#  # If "complex aggregation" is selected, also filter per concept:
-#  ?conceptDimension i:hasConceptCD ?sameConcept .
-#  ?conceptDimension i:hasNameChar "#CONCEPTIDENTIFIER#" .
-
   # temporal filtering:
-  #FILTER (?startdate1_ux < ?startdate2_ux && ?enddate1_ux > ?startdate2_ux && ?enddate1_ux < ?enddate2_ux) .
-  
-  FILTER (?startdate1_ux - #UNCERTAINTY# < ?startdate2_ux &&
-          ?enddate1_ux + - #UNCERTAINTY# > ?startdate2_ux &&
-		  ?enddate1_ux - #UNCERTAINTY# < ?enddate2_ux &&
+  FILTER (?startdate2_ux - ?startdate1_ux > #UNCERTAINTY# &&
 		  ?enddate2_ux - ?enddate1_ux > #UNCERTAINTY# &&
-		  ?startdate2_ux - ?startdate1_ux > #UNCERTAINTY#) .
-  
+		  ?enddate1_ux - ?startdate2_ux > #UNCERTAINTY#) . 
   
   # remove all intervals that have already been processed:
   FILTER NOT EXISTS { ?interval1 i:isMarked "aggregated" }

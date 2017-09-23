@@ -14,21 +14,12 @@ CONSTRUCT {
   
   # Must have Unix time stamps (for computation)
   ?interval1 i:hasStartDateUnix ?startdate1_ux .
-  ?interval1 i:hasEndDateUnix ?enddate1_ux .
-  
+  ?interval1 i:hasEndDateUnix ?enddate1_ux .  
   ?interval2 i:hasStartDateUnix ?startdate2_ux .
   ?interval2 i:hasEndDateUnix ?enddate2_ux .
   
-#  # If "complex aggregation" is selected, also filter per concept:
-#  ?conceptDimension i:hasConceptCD ?sameConcept .
-#  ?conceptDimension i:hasNameChar "#CONCEPTIDENTIFIER#" .
-    
   # temporal filtering:
-  #FILTER (?startdate2_ux < ?startdate1_ux && ((?enddate2_ux - ?enddate1_ux < #UNCERTAINTY# && ?enddate2_ux - ?enddate1_ux >= 0)
-  #							               || (?enddate1_ux - ?enddate2_ux < #UNCERTAINTY# && ?enddate1_ux - ?enddate2_ux >= 0))) .
-    
-  FILTER (?startdate1_ux + #UNCERTAINTY# > ?startdate2_ux &&
-          ?enddate1_ux + #UNCERTAINTY# >= ?enddate2_ux &&
+  FILTER (?enddate1_ux + #UNCERTAINTY# >= ?enddate2_ux &&
           ?enddate1_ux - #UNCERTAINTY# <= ?enddate2_ux &&
 		  ?startdate1_ux - ?startdate2_ux > #UNCERTAINTY#) .
 
