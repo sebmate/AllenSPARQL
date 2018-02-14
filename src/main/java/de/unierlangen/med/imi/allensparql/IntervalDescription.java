@@ -1,5 +1,9 @@
 package de.unierlangen.med.imi.allensparql;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.regex.Pattern;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -48,7 +52,7 @@ class IntervalDescription {
     }
 
     public void setintervalName(String intervalName) {
-        this.setIntervalName(intervalName);
+        this.intervalName = intervalName;
     }
 
     public String getEnumerator() {
@@ -67,7 +71,8 @@ class IntervalDescription {
         this.itemType = itemType;
     }
 
-    private String origDescription = "", description = "";
+    private String origDescription = "";
+    private String description = "";
     private String occuranceModifier = "";
     private String valueModifier = "";
     private String intervalName = "";
@@ -106,8 +111,7 @@ class IntervalDescription {
         }
         toProcess = toProcess.replaceAll("  ", " ");
 
-        System.out.println(">>>  " + toProcess);
-
+        //System.out.println(">>>  " + toProcess);
         if (toProcess.contains("<") || toProcess.contains("=") || toProcess.contains(">") || toProcess.contains("!")) {
             String temp = toProcess.replaceAll("!", "|").replaceAll("=", "|").replaceAll(">", "|").replaceAll("<", "|")
                     .replaceAll("\\|\\|", "|");
@@ -130,6 +134,7 @@ class IntervalDescription {
                 if (OK) {
                     valueModifier += c;
                 }
+
             }
             valueModifier = valueModifier.trim();
 
@@ -151,7 +156,14 @@ class IntervalDescription {
 
         if (isRelativeInterval(origDescription)) {
 
-            for (int a = 0; a < items.length; a = a + 2) {
+            int k = 0;
+            if ((items.length & 1) == 0) {
+                k = items.length;
+            } else {
+                k = items.length - 1;
+            }
+
+            for (int a = 0; a < k; a = a + 2) {
 
                 String cnt = items[a];
                 String unit = items[a + 1];
@@ -180,19 +192,20 @@ class IntervalDescription {
             }
         }
 
-        // occuranceModifier = cleanUpComparator(occuranceModifier);
-        // valueModifier = cleanUpComparator(valueModifier);
-        System.out.println("");
-        System.out.println("Evaluating new interval \"" + description + "\":");
-        System.out.println("intervalName     : " + intervalName);
-        System.out.println("itemType         : " + itemType);
-        System.out.println("enumerator       : " + enumerator);
-        System.out.println("occuranceModifier: " + getOccuranceModifier());
-        System.out.println("valueModifier    : " + getValueModifier());
-        System.out.println("   comparator    : " + getComparator(getValueModifier()));
-        System.out.println("   value         : " + getValue(getValueModifier()));
-        System.out.println("durationSeconds  : " + durationSeconds);
-
+        /*
+		// occuranceModifier = cleanUpComparator(occuranceModifier);
+		// valueModifier = cleanUpComparator(valueModifier);
+		System.out.println("");
+		System.out.println("Evaluating new interval \"" + description + "\":");
+		System.out.println("intervalName     : " + intervalName);
+		System.out.println("itemType         : " + itemType);
+		System.out.println("enumerator       : " + enumerator);
+		System.out.println("occuranceModifier: " + getOccuranceModifier());
+		System.out.println("valueModifier    : " + getValueModifier());
+		System.out.println("   comparator    : " + getComparator(getValueModifier()));
+		System.out.println("   value         : " + getValue(getValueModifier()));
+		System.out.println("durationSeconds  : " + durationSeconds);
+         */
     }
 
     private String cleanUpComparator(String input) {
@@ -208,7 +221,7 @@ class IntervalDescription {
     }
 
     public String buildName() {
-        String temp = getOccuranceModifier() + " " + getItemType() + " " + getEnumerator() + " " + getValueModifier();
+        String temp = occuranceModifier + " " + itemType + " " + enumerator + " " + valueModifier;
         temp = temp.replaceAll("  ", " ");
         return temp.trim();
     }
@@ -218,14 +231,14 @@ class IntervalDescription {
     }
 
     public boolean isNegation() {
-        if (getOccuranceModifier().equals("NO")) {
+        if (occuranceModifier.equals("NO")) {
             return true;
         }
         return false;
     }
 
     public boolean isComparison() {
-        if (isNumeric(getOccuranceModifier())) {
+        if (!occuranceModifier.equals("") || !valueModifier.equals("")) {
             return true;
         }
         return false;
@@ -236,6 +249,19 @@ class IntervalDescription {
             return true;
         }
         return false;
+    }
+
+    public boolean isTimeStamp() {
+
+        // Based on:
+        // https://stackoverflow.com/questions/5902310/how-do-i-validate-a-timestamp
+        SimpleDateFormat format = new java.text.SimpleDateFormat("yyyy-MM-dd");
+        try {
+            format.parse(origDescription);
+            return true;
+        } catch (ParseException e) {
+            return false;
+        }
     }
 
     private boolean isRelativeInterval(String in) {
@@ -275,13 +301,6 @@ class IntervalDescription {
 
     public String getValue(String input) {
         return splitComparison(1, input);
-    }
-
-    /**
-     * @param intervalName the intervalName to set
-     */
-    public void setIntervalName(String intervalName) {
-        this.intervalName = intervalName;
     }
 
     /**
