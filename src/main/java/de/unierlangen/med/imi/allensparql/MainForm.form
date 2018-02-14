@@ -99,30 +99,28 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="previousQueries" max="32767" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="refreshQueries" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="inferAllen" alignment="0" max="32767" attributes="0"/>
-                              <Component id="uploadData" alignment="0" max="32767" attributes="0"/>
-                              <Component id="createView" alignment="0" max="32767" attributes="0"/>
-                              <Component id="duplicateIntervals" alignment="0" max="32767" attributes="0"/>
-                              <Component id="linkIntervals" alignment="0" max="32767" attributes="0"/>
-                              <Component id="createSuperIntervals" alignment="0" max="32767" attributes="0"/>
-                              <Component id="linkSubintervals" alignment="0" max="32767" attributes="0"/>
-                              <Component id="createSimplified" alignment="0" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="previousQueries" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="refreshQueries" min="-2" max="-2" attributes="0"/>
                           </Group>
+                          <Component id="inferAllen" alignment="0" max="32767" attributes="0"/>
+                          <Component id="uploadData" alignment="0" max="32767" attributes="0"/>
+                          <Component id="createView" alignment="0" max="32767" attributes="0"/>
+                          <Component id="duplicateIntervals" alignment="0" max="32767" attributes="0"/>
+                          <Component id="linkIntervals" alignment="0" max="32767" attributes="0"/>
+                          <Component id="createSuperIntervals" alignment="0" max="32767" attributes="0"/>
+                          <Component id="linkSubintervals" alignment="0" max="32767" attributes="0"/>
+                          <Component id="createSimplified" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Component id="allButton" min="-2" pref="95" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="noneButton" min="-2" pref="95" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="runETL" min="-2" pref="111" max="-2" attributes="0"/>
+                              <Component id="runETL" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -289,7 +287,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="allButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="All"/>
+        <Property name="text" type="java.lang.String" value="Select all"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="allButtonActionPerformed"/>
@@ -297,7 +295,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="noneButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="None"/>
+        <Property name="text" type="java.lang.String" value="Select none"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="noneButtonActionPerformed"/>
@@ -654,7 +652,7 @@
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="c0" green="c0" id="lightGray" palette="1" red="c0" type="palette"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Aggregation thrshold (s):"/>
+                <Property name="text" type="java.lang.String" value="Aggregation threshold (s):"/>
                 <Property name="enabled" type="boolean" value="false"/>
               </Properties>
             </Component>
