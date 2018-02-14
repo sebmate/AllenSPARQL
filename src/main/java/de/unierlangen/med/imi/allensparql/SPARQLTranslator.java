@@ -120,17 +120,15 @@ class SPARQLTranslator {
             if (relation.equals("equals")) {
                 comp = "=";
             }
-            if (comp.equals("")) {
-                //result += "  # ERROR: A duration can not be used for constraining another \n"
-                //        + "  #        interval over the \"" + relation.replaceAll("a:", "") + "\" relation. This is only\n";
-                //result += "  #        possible with the relations \"finishes\", \"during\",\n"
-                //        + "  #        \"starts\", \"equals\" and their reverses.\n\n";
-            } else {
+            if (!comp.equals("") && !interval1.isDuration()) {
                 result += "  # Note: Limiting the length of interval \"" + conceptIdentifier1 + "\" to " + comp + " " + interval2.getIntervalName() + ":\n";
                 result += "  ?" + IntervalPrefix + conceptIdentifier1 + " a:hasStartDateUnix ?start_of_" + IntervalPrefix + conceptIdentifier1 + " .\n";
                 result += "  ?" + IntervalPrefix + conceptIdentifier1 + " a:hasEndDateUnix ?end_of_" + IntervalPrefix + conceptIdentifier1 + " .\n";
                 result += "  FILTER (?end_of_" + IntervalPrefix + conceptIdentifier1 + " - ?start_of_" + IntervalPrefix + conceptIdentifier1 + " " + comp + " " + interval2.getDurationSeconds() + ") .\n\n";
+            } else {
+                // Either the relation is not limiting the length of the interval or both intervals are duration intervals.
             }
+
         }
 
         if ((interval1.isDuration())) {
@@ -144,16 +142,13 @@ class SPARQLTranslator {
             if (relation.equals("equals")) {
                 comp = "=";
             }
-            if (comp.equals("")) {
-                //result += "  # ERROR: A duration can not be used for constraining another \n"
-                //        + "  #        interval over the \"" + relation.replaceAll("a:", "") + "\" relation. This is only\n";
-                //result += "  #        possible with the relations \"finishes\", \"during\",\n"
-                //        + "  #        \"starts\", \"equals\" and their reverses.\n\n";
-            } else {
+            if (!comp.equals("") && !interval2.isDuration()) {
                 result += "  # Note: Limiting the length of interval \"" + conceptIdentifier2 + "\" to " + comp + " " + interval1.getIntervalName() + ":\n";
                 result += "  ?" + IntervalPrefix + conceptIdentifier2 + " a:hasStartDateUnix ?start_of_" + IntervalPrefix + conceptIdentifier2 + " .\n";
                 result += "  ?" + IntervalPrefix + conceptIdentifier2 + " a:hasEndDateUnix ?end_of_" + IntervalPrefix + conceptIdentifier2 + " .\n";
                 result += "  FILTER (?end_of_" + IntervalPrefix + conceptIdentifier2 + " - ?start_of_" + IntervalPrefix + conceptIdentifier2 + " " + comp + " " + interval1.getDurationSeconds() + ") .\n\n";
+            } else {
+                // Either the relation is not limiting the length of the interval or both intervals are duration intervals.
             }
         }
 
