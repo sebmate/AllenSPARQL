@@ -5,6 +5,8 @@
  */
 package de.unierlangen.med.imi.allensparql;
 
+import com.fasterxml.jackson.core.JsonParser;
+import com.google.gson.JsonElement;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.InputStreamReader;
@@ -13,6 +15,7 @@ import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import org.json.JSONObject;
 
 /**
  *
@@ -55,10 +58,10 @@ class RelativeConstraintsProcessor {
                     String interval2 = as.getInterval2().getIntervallNameSPARQL();
                     String relation = as.getRelation();
 
-                    String I1s = "start_of_int_" + interval1;
-                    String I1e = "end_of_int_" + interval1;
-                    String I2s = "start_of_int_" + interval2;
-                    String I2e = "end_of_int_" + interval2;
+                    String I1s = "unix_start_of_int_" + interval1;
+                    String I1e = "unix_end_of_int_" + interval1;
+                    String I2s = "unix_start_of_int_" + interval2;
+                    String I2e = "unix_end_of_int_" + interval2;
 
                     variables += I1s + " = var('" + I1s + "')\n";
                     variables += I1e + " = var('" + I1e + "')\n";
@@ -167,7 +170,12 @@ class RelativeConstraintsProcessor {
                 sageResult += line;
             }
 
-            System.out.println(sageResult);
+            System.out.println("Result from SageCell:\n");
+            
+            JSONObject json = new JSONObject(sageResult); 
+            System.out.println(json.toString(3)); 
+            
+            System.out.println("");
 
             Matcher m = Pattern.compile("\\[\\[(.*?)\\]\\]").matcher(sageResult);
             while (m.find()) {
@@ -228,8 +236,8 @@ class RelativeConstraintsProcessor {
             }
         }
 
-        out = out.replaceAll("start_of", "?start_of");
-        out = out.replaceAll("end_of", "?end_of");
+        out = out.replaceAll("unix_start_of", "?unix_start_of");
+        out = out.replaceAll("unix_end_of", "?unix_end_of");
         out = out.replaceAll("==", "=");
 
         return out;

@@ -868,8 +868,8 @@ public class MainForm extends javax.swing.JFrame {
     }//GEN-LAST:event_SPARQLcodeKeyPressed
 
     private void explainPlanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_explainPlanActionPerformed
-       String optimized =  explainPlan(SPARQLcode.getText());
-       //SPARQLcode.setText(optimized);
+        String optimized = explainPlan(SPARQLcode.getText());
+        //SPARQLcode.setText(optimized);
     }//GEN-LAST:event_explainPlanActionPerformed
 
 
@@ -1110,7 +1110,6 @@ public class MainForm extends javax.swing.JFrame {
         log("Uploading data to RDF triple store ... ");
 
         //uploadRDF("C:\\Users\\matesn\\ownCloud\\Development\\d2rq-0.8.1\\i2b2.rdf", "http://localhost:3030/i2b2");
-     
         String selectAll = "CONSTRUCT {\n"
                 + "?s ?p ?o\n"
                 + "}WHERE {\n"
@@ -1281,7 +1280,6 @@ public class MainForm extends javax.swing.JFrame {
         String r = q.serialize();
 
         //JOptionPane.showMessageDialog(null, r, "Optimized SPARQL", JOptionPane.INFORMATION_MESSAGE);
-
         return r;
     }
 
@@ -1450,35 +1448,36 @@ public class MainForm extends javax.swing.JFrame {
 
         // Derive relative constraints:
         if (!Allen.trim().replaceAll(";", "").equals("") && !Allen.contains("Temporal Error")) {
-            log("Attempting to compute relative temporal constraints via SageMathCell.");
+            log("Preparing to compute relative temporal constraints via SageMathCell ...");
             RelativeConstraintsProcessor rcp = new RelativeConstraintsProcessor(Allen);
             String result = rcp.process();
+
             if (!result.equals("")) {
                 log("SageMath expression to evaluate is:\n");
                 log(result + "\n");
+                log("Calling SageMathCell ...");
+                relativeTemporalCriteria = rcp.callSageMath(result);
+                System.out.println("Relative temporal criteria: " + relativeTemporalCriteria);
+                relativeTemporalCriteria = rcp.makeSparqlFilter(relativeTemporalCriteria);
+                log("... Done!");
+
+                if (relativeTemporalCriteria.equals("")) {
+                    log("SageMathCell did not return a result when computing the \"constraints on relative intervals\" SPARQL section. Please check for invalid temporal patterns involving duration intervals (e.g. \"3 Months\" during \"2 Months\")!");
+                    JOptionPane.showMessageDialog(null, "SageMathCell did not return a result when computing the \"constraints on relative intervals\" SPARQL section.\nPlease check for invalid temporal patterns involving duration intervals (e.g. \"3 Months\" during \"2 Months\")!", "Temporal Error", JOptionPane.ERROR_MESSAGE);
+                    relativeTemporalCriteria = "  # ERROR: SageMathCell did not return a result when computing the \"constraints on relative\n"
+                            + "  #        intervals\" SPARQL section. Please check for invalid temporal patterns involving\n"
+                            + "  #        duration intervals (e.g. \"3 Months\" during \"2 Months\")!";
+                }
+
             } else {
                 log("There are no relative temporal constraints in this query.\n");
             }
 
-            /*relativeTemporalCriteria = "end_of_int_1_second == start_of_int_Surgery - 3628800\n"
-                    + "end_of_int_4_Weeks == start_of_int_Surgery - 3628801\n"
-                    + "end_of_int_6_Weeks == start_of_int_Surgery\n"
-                    + "start_of_int_1_second == start_of_int_Surgery - 3628801\n"
-                    + "start_of_int_4_Weeks == start_of_int_Surgery - 6048001\n"
-                    + "start_of_int_6_Weeks == start_of_int_Surgery - 3628800\n"
-                    + "start_of_int_Mitomycin - start_of_int_Surgery + 3628800 > 0\n"
-                    + "end_of_int_Chemotherapy - start_of_int_Surgery + 6048001 > 0\n"
-                    + "-start_of_int_Chemotherapy + start_of_int_Surgery - 6048001 > 0\n"
-                    + "-end_of_int_Mitomycin + start_of_int_Surgery > 0\n"
-                    + "-end_of_int_Chemotherapy + start_of_int_Surgery - 3628801 > 0";*/
-            relativeTemporalCriteria = rcp.callSageMath(result);
-            System.out.println("XXXXXXXX" + relativeTemporalCriteria);
-            relativeTemporalCriteria = rcp.makeSparqlFilter(relativeTemporalCriteria);
         }
 
         // Generate and execute SPARQL:
         patientCount.setText("Patients: unknown");
-        log("Translating query pattern into a SPARQL query.");
+        log("Translating query pattern into a SPARQL query ...");
         String SPARQLQuery = "";
         try {
             if (!Allen.trim().replaceAll(";", "").equals("") && !Allen.contains("Temporal Error")) {
@@ -1488,7 +1487,8 @@ public class MainForm extends javax.swing.JFrame {
                 System.out.println();
                 translator.setRelativeConstraints(relativeTemporalCriteria);
                 SPARQLQuery = translator.translate();
-
+                log("... Done!");
+                
                 if (!SPARQLQuery.trim().equals("") && !SPARQLQuery.equals(";")) {
                     SPARQLcode.setText(SPARQLQuery.trim());
 
@@ -1506,8 +1506,8 @@ public class MainForm extends javax.swing.JFrame {
             }
         } catch (Exception e) {
             e.printStackTrace();
-
         }
+
         if (SPARQLQuery.contains("WARNING: ")) {
             TranslatorStatus.setText("SPARQL WARNING");
             TranslatorStatus.setBackground(Color.YELLOW);
