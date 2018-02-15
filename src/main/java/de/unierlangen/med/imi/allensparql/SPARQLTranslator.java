@@ -73,12 +73,12 @@ class SPARQLTranslator {
         if (!interval1.isDuration()) {
             result += "\n  # Describing the interval \"" + interval1.getIntervalName() + "\":";
             result += "\n  ?" + IntervalPrefix + conceptIdentifier1 + " a:hasConcept \"" + interval1.getItemType() + "\" .\n"
-                    + "  ?" + IntervalPrefix + conceptIdentifier1 + " a:hasPatient ?result .\n";
+                    + "  ?" + IntervalPrefix + conceptIdentifier1 + " a:hasPatient ?patient .\n";
             result += "  ?" + IntervalPrefix + conceptIdentifier1 + " a:hasValue ?value_of_" + IntervalPrefix + conceptIdentifier1 + " .\n";
             result += "  ?" + IntervalPrefix + conceptIdentifier1 + " a:hasStartDateUnix ?unix_start_of_" + IntervalPrefix + conceptIdentifier1 + " .\n";
             result += "  ?" + IntervalPrefix + conceptIdentifier1 + " a:hasEndDateUnix ?unix_end_of_" + IntervalPrefix + conceptIdentifier1 + " .\n";
-            result += "  ?" + IntervalPrefix + conceptIdentifier1 + " a:hasStartDate ?start_of_" + IntervalPrefix + conceptIdentifier1 + " .\n";
-            result += "  ?" + IntervalPrefix + conceptIdentifier1 + " a:hasEndDate ?end_of_" + IntervalPrefix + conceptIdentifier1 + " .\n";
+            result += "  # ?" + IntervalPrefix + conceptIdentifier1 + " a:hasStartDate ?start_of_" + IntervalPrefix + conceptIdentifier1 + " .\n";
+            result += "  # ?" + IntervalPrefix + conceptIdentifier1 + " a:hasEndDate ?end_of_" + IntervalPrefix + conceptIdentifier1 + " .\n";
             additionalVariables.add("?start_of_" + IntervalPrefix + conceptIdentifier1);
             additionalVariables.add("?end_of_" + IntervalPrefix + conceptIdentifier1);
 
@@ -88,12 +88,12 @@ class SPARQLTranslator {
         if (!interval2.isDuration()) {
             result += "\n  # Describing the interval \"" + interval2.getIntervalName() + "\":";
             result += "\n  ?" + IntervalPrefix + conceptIdentifier2 + " a:hasConcept \"" + interval2.getItemType() + "\" .\n"
-                    + "  ?" + IntervalPrefix + conceptIdentifier2 + " a:hasPatient ?result .\n";
+                    + "  ?" + IntervalPrefix + conceptIdentifier2 + " a:hasPatient ?patient .\n";
             result += "  ?" + IntervalPrefix + conceptIdentifier2 + " a:hasValue ?value_of_" + IntervalPrefix + conceptIdentifier2 + " .\n";
             result += "  ?" + IntervalPrefix + conceptIdentifier2 + " a:hasStartDateUnix ?unix_start_of_" + IntervalPrefix + conceptIdentifier2 + " .\n";
             result += "  ?" + IntervalPrefix + conceptIdentifier2 + " a:hasEndDateUnix ?unix_end_of_" + IntervalPrefix + conceptIdentifier2 + " .\n";
-            result += "  ?" + IntervalPrefix + conceptIdentifier2 + " a:hasStartDate ?start_of_" + IntervalPrefix + conceptIdentifier2 + " .\n";
-            result += "  ?" + IntervalPrefix + conceptIdentifier2 + " a:hasEndDate ?end_of_" + IntervalPrefix + conceptIdentifier2 + " .\n";
+            result += "  # ?" + IntervalPrefix + conceptIdentifier2 + " a:hasStartDate ?start_of_" + IntervalPrefix + conceptIdentifier2 + " .\n";
+            result += "  # ?" + IntervalPrefix + conceptIdentifier2 + " a:hasEndDate ?end_of_" + IntervalPrefix + conceptIdentifier2 + " .\n";
             additionalVariables.add("?start_of_" + IntervalPrefix + conceptIdentifier2);
             additionalVariables.add("?end_of_" + IntervalPrefix + conceptIdentifier2);
         }
@@ -196,7 +196,7 @@ class SPARQLTranslator {
                 //+ "prefix owl: <http://www.w3.org/2002/07/owl#>\n"
                 "PREFIX a: <https://www.imi.med.fau.de/AllenSparql/>\n\n"
                 // + "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n\n"
-                + "SELECT DISTINCT ?result\nWHERE {\n\n";
+                + "SELECT DISTINCT ?patient\nWHERE {\n\n";
 
         boolean OK = false;
 
@@ -230,17 +230,17 @@ class SPARQLTranslator {
             result += "  # ================[ Constraints on relative intervals (derived with SageMath) ]================ \n\n";
             result += relativeTemporalCriteria + "\n\n";
         }
-        result += "} ORDER BY ?result";
+        result += "} ORDER BY ?patient";
 
         result = cleanUpSPARQL(result);
 
         String addedVariables = "";
         Iterator<String> itr = additionalVariables.iterator();
         while (itr.hasNext()) {
-            addedVariables += itr.next() + " ";
+            addedVariables += "  # " + itr.next() + "\n";
         }
 
-        result = result.replaceAll("DISTINCT \\?result", "DISTINCT \\?result " + addedVariables);
+        result = result.replaceAll("DISTINCT \\?patient", "DISTINCT \\?patient\n\n  # To retrieve additional data, uncomment the variables and associated statements below,\n  # and execute this SPARQL code directly on the Fuseki server:\n\n" + addedVariables +"\n");
 
         result = optimizeSPARQL(result);
 

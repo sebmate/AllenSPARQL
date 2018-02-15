@@ -1,7 +1,7 @@
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix owl: <http://www.w3.org/2002/07/owl#>
 PREFIX i: <https://www.imi.med.fau.de/AllenSparql/>
-SELECT (COUNT(*) as ?result)
+SELECT (COUNT(*) as ?patient)
 WHERE {
 	?s ?p ?o .
 }

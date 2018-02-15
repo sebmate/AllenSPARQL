@@ -1251,7 +1251,7 @@ public class MainForm extends javax.swing.JFrame {
             ResultSet results = q.execSelect();
             while (results.hasNext()) {
                 QuerySolution soln = results.nextSolution();
-                RDFNode result = soln.get("result");
+                RDFNode result = soln.get("patient");
                 s += result.toString() + "\n";
             }
             q.close();
