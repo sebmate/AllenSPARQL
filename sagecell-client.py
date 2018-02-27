@@ -12,7 +12,7 @@ import requests
 
 class SageCell(object):
 
-    def __init__(self, url, timeout=10):
+    def __init__(self, url, timeout=120):
         if not url.endswith('/'):
             url += '/'
         # POST or GET <url>/kernel
