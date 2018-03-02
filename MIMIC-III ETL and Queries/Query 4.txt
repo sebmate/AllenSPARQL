@@ -1,0 +1,96 @@
+PREFIX a: <https://www.imi.med.fau.de/AllenSparql/>
+
+SELECT DISTINCT ?patient
+
+  # To retrieve additional data, uncomment the variables and associated statements below,
+  # and execute this SPARQL code directly on the Fuseki server:
+
+  # ?value_of_int_SAPS_1
+  # ?start_of_int_SAPS_1
+  # ?start_of_int_SAPS_3
+  # ?end_of_int_SAPS_1
+  # ?end_of_int_SAPS_3
+  # ?value_of_int_SAPS_3
+
+WHERE {
+
+  # ==============================[ SAPS #1 = 2 before SAPS #3 = 2 ]==============================
+
+  ?int_SAPS_1 a:before ?int_SAPS_3 . 
+
+  # Describing the interval "SAPS #1":
+  ?int_SAPS_1 a:hasConcept "SAPS" .
+  ?int_SAPS_1 a:hasPatient ?patient .
+  ?int_SAPS_1 a:hasValue ?value_of_int_SAPS_1 .
+  ?int_SAPS_1 a:hasStartDateUnix ?unix_start_of_int_SAPS_1 .
+  ?int_SAPS_1 a:hasEndDateUnix ?unix_end_of_int_SAPS_1 .
+  # ?int_SAPS_1 a:hasStartDate ?start_of_int_SAPS_1 .
+  # ?int_SAPS_1 a:hasEndDate ?end_of_int_SAPS_1 .
+
+  # Describing the interval "SAPS #3":
+  ?int_SAPS_3 a:hasConcept "SAPS" .
+  ?int_SAPS_3 a:hasPatient ?patient .
+  ?int_SAPS_3 a:hasValue ?value_of_int_SAPS_3 .
+  ?int_SAPS_3 a:hasStartDateUnix ?unix_start_of_int_SAPS_3 .
+  ?int_SAPS_3 a:hasEndDateUnix ?unix_end_of_int_SAPS_3 .
+  # ?int_SAPS_3 a:hasStartDate ?start_of_int_SAPS_3 .
+  # ?int_SAPS_3 a:hasEndDate ?end_of_int_SAPS_3 .
+
+  # Constraining the value of the interval "SAPS #1":
+  FILTER (?value_of_int_SAPS_1 = 2) .
+
+  # Constraining the value of the interval "SAPS #3":
+  FILTER (?value_of_int_SAPS_3 = 2) .
+
+  # ==================================[ Processing Exclusions ]================================== 
+
+  MINUS {
+
+    # ================[ SAPS #1 = 2 before NO SAPS #2 = 1 (Part of exclusion #1) ]================
+
+    ?int_SAPS_1_excl_1 a:before ?int_SAPS_2_excl_1 . 
+
+    # Describing the interval "SAPS #1":
+    ?int_SAPS_1_excl_1 a:hasConcept "SAPS" .
+    ?int_SAPS_1_excl_1 a:hasPatient ?patient .
+    ?int_SAPS_1_excl_1 a:hasValue ?value_of_int_SAPS_1_excl_1 .
+    # ?int_SAPS_1_excl_1 a:hasStartDate ?start_of_int_SAPS_1_excl_1 .
+    # ?int_SAPS_1_excl_1 a:hasEndDate ?end_of_int_SAPS_1_excl_1 .
+
+    # Describing the interval "SAPS #2":
+    ?int_SAPS_2_excl_1 a:hasConcept "SAPS" .
+    ?int_SAPS_2_excl_1 a:hasPatient ?patient .
+    ?int_SAPS_2_excl_1 a:hasValue ?value_of_int_SAPS_2_excl_1 .
+    # ?int_SAPS_2_excl_1 a:hasStartDate ?start_of_int_SAPS_2_excl_1 .
+    # ?int_SAPS_2_excl_1 a:hasEndDate ?end_of_int_SAPS_2_excl_1 .
+
+    # Constraining the value of the interval "SAPS #1":
+    FILTER (?value_of_int_SAPS_1_excl_1 = 2) .
+
+    # Constraining the value of the interval "SAPS #2":
+    FILTER (?value_of_int_SAPS_2_excl_1 = 1) .
+
+    # =================[ SAPS #1 = 2 before SAPS #3 = 2 (Part of exclusion #1) ]=================
+
+    ?int_SAPS_1_excl_1 a:before ?int_SAPS_3_excl_1 . 
+
+    # Describing the interval "SAPS #3":
+    ?int_SAPS_3_excl_1 a:hasConcept "SAPS" .
+    ?int_SAPS_3_excl_1 a:hasPatient ?patient .
+    ?int_SAPS_3_excl_1 a:hasValue ?value_of_int_SAPS_3_excl_1 .
+    # ?int_SAPS_3_excl_1 a:hasStartDate ?start_of_int_SAPS_3_excl_1 .
+    # ?int_SAPS_3_excl_1 a:hasEndDate ?end_of_int_SAPS_3_excl_1 .
+
+    FILTER (?value_of_int_SAPS_3_excl_1 = 2) .
+
+    # ================[ NO SAPS #2 = 1 before SAPS #3 = 2 (Part of exclusion #1) ]================
+
+    ?int_SAPS_2_excl_1 a:before ?int_SAPS_3_excl_1 . 
+
+    # Constraining the value of the interval "SAPS #2":
+
+    # ================[ Constraints on relative intervals (derived with SageMath) ]================ 
+
+  } # End of exclusions
+
+} ORDER BY ?patient

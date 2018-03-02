@@ -1,0 +1,103 @@
+PREFIX a: <https://www.imi.med.fau.de/AllenSparql/>
+
+SELECT DISTINCT ?patient
+
+  # To retrieve additional data, uncomment the variables and associated statements below,
+  # and execute this SPARQL code directly on the Fuseki server:
+
+  # ?end_of_int_SAPS_2
+  # ?start_of_int_SAPS_3
+  # ?end_of_int_SAPS_1
+  # ?start_of_int_SAPS_2
+  # ?end_of_int_SAPS_3
+  # ?value_of_int_SAPS_3
+  # ?value_of_int_SAPS_2
+  # ?start_of_int_SAPS_1
+
+WHERE {
+
+  # ================================[ 3 Months contains SAPS #1 ]================================
+
+  # Note: No direct constraint for this Allen statement was added, because at least one of the
+  #       two intervals is a duration. Relative temporal constraints will be handled at the end.
+
+  # Describing the interval "SAPS #1":
+  ?int_SAPS_1 a:hasConcept "SAPS" .
+  ?int_SAPS_1 a:hasPatient ?patient .
+  ?int_SAPS_1 a:hasValue ?value_of_int_SAPS_1 .
+  ?int_SAPS_1 a:hasStartDateUnix ?unix_start_of_int_SAPS_1 .
+  ?int_SAPS_1 a:hasEndDateUnix ?unix_end_of_int_SAPS_1 .
+  # ?int_SAPS_1 a:hasStartDate ?start_of_int_SAPS_1 .
+  # ?int_SAPS_1 a:hasEndDate ?end_of_int_SAPS_1 .
+
+  # Constraining the duration of interval "SAPS #1" to < 3 Months:
+  FILTER (?unix_end_of_int_SAPS_1 - ?unix_start_of_int_SAPS_1 < 7889400) .
+
+  # =============================[ SAPS #1 before SAPS #2 > SAPS #1 ]=============================
+
+  ?int_SAPS_1 a:before ?int_SAPS_2 . 
+
+  # Describing the interval "SAPS #2":
+  ?int_SAPS_2 a:hasConcept "SAPS" .
+  ?int_SAPS_2 a:hasPatient ?patient .
+  ?int_SAPS_2 a:hasValue ?value_of_int_SAPS_2 .
+  ?int_SAPS_2 a:hasStartDateUnix ?unix_start_of_int_SAPS_2 .
+  ?int_SAPS_2 a:hasEndDateUnix ?unix_end_of_int_SAPS_2 .
+  # ?int_SAPS_2 a:hasStartDate ?start_of_int_SAPS_2 .
+  # ?int_SAPS_2 a:hasEndDate ?end_of_int_SAPS_2 .
+
+  # Constraining the value of the interval "SAPS #2":
+  FILTER (?value_of_int_SAPS_2 > ?value_of_int_SAPS_1) .
+
+  # =============================[ SAPS #1 before SAPS #3 > SAPS #2 ]=============================
+
+  ?int_SAPS_1 a:before ?int_SAPS_3 . 
+
+  # Describing the interval "SAPS #3":
+  ?int_SAPS_3 a:hasConcept "SAPS" .
+  ?int_SAPS_3 a:hasPatient ?patient .
+  ?int_SAPS_3 a:hasValue ?value_of_int_SAPS_3 .
+  ?int_SAPS_3 a:hasStartDateUnix ?unix_start_of_int_SAPS_3 .
+  ?int_SAPS_3 a:hasEndDateUnix ?unix_end_of_int_SAPS_3 .
+  # ?int_SAPS_3 a:hasStartDate ?start_of_int_SAPS_3 .
+  # ?int_SAPS_3 a:hasEndDate ?end_of_int_SAPS_3 .
+
+  # Constraining the value of the interval "SAPS #3":
+  FILTER (?value_of_int_SAPS_3 > ?value_of_int_SAPS_2) .
+
+  # ===========================[ 3 Months contains SAPS #2 > SAPS #1 ]===========================
+
+  # Note: No direct constraint for this Allen statement was added, because at least one of the
+  #       two intervals is a duration. Relative temporal constraints will be handled at the end.
+
+  # Constraining the duration of interval "SAPS #2" to < 3 Months:
+  FILTER (?unix_end_of_int_SAPS_2 - ?unix_start_of_int_SAPS_2 < 7889400) .
+
+  # ===========================[ 3 Months contains SAPS #3 > SAPS #2 ]===========================
+
+  # Note: No direct constraint for this Allen statement was added, because at least one of the
+  #       two intervals is a duration. Relative temporal constraints will be handled at the end.
+
+  # Constraining the duration of interval "SAPS #3" to < 3 Months:
+  FILTER (?unix_end_of_int_SAPS_3 - ?unix_start_of_int_SAPS_3 < 7889400) .
+
+  # ========================[ SAPS #2 > SAPS #1 before SAPS #3 > SAPS #2 ]========================
+
+  ?int_SAPS_2 a:before ?int_SAPS_3 . 
+
+  # ================[ Constraints on relative intervals (derived with SageMath) ]================ 
+
+  FILTER (?unix_end_of_int_SAPS_3 - ?unix_start_of_int_SAPS_3 > 0) .
+  FILTER (?unix_end_of_int_SAPS_2 - ?unix_start_of_int_SAPS_2 > 0) .
+  FILTER (?unix_end_of_int_SAPS_1 - ?unix_start_of_int_SAPS_1 > 0) .
+  FILTER (-?unix_end_of_int_SAPS_1 + ?unix_start_of_int_SAPS_1 + 7889400 > 0) .
+  FILTER (-?unix_end_of_int_SAPS_2 + ?unix_start_of_int_SAPS_1 + 7889400 > 0) .
+  FILTER (-?unix_end_of_int_SAPS_3 + ?unix_start_of_int_SAPS_1 + 7889400 > 0) .
+  FILTER (-?unix_end_of_int_SAPS_1 + ?unix_start_of_int_SAPS_2 + 7889400 > 0) .
+  FILTER (-?unix_end_of_int_SAPS_2 + ?unix_start_of_int_SAPS_2 + 7889400 > 0) .
+  FILTER (-?unix_end_of_int_SAPS_3 + ?unix_start_of_int_SAPS_2 + 7889400 > 0) .
+  FILTER (-?unix_end_of_int_SAPS_1 + ?unix_start_of_int_SAPS_3 + 7889400 > 0) .
+  FILTER (-?unix_end_of_int_SAPS_2 + ?unix_start_of_int_SAPS_3 + 7889400 > 0) .
+  FILTER (-?unix_end_of_int_SAPS_3 + ?unix_start_of_int_SAPS_3 + 7889400 > 0) .
+
+} ORDER BY ?patient

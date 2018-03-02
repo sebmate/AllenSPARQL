@@ -1,0 +1,138 @@
+PREFIX a: <https://www.imi.med.fau.de/AllenSparql/>
+
+SELECT DISTINCT ?patient
+
+  # To retrieve additional data, uncomment the variables and associated statements below,
+  # and execute this SPARQL code directly on the Fuseki server:
+
+  # ?start_of_int_HbA1c_2
+  # ?value_of_int_HbA1c_2
+  # ?end_of_int_HbA1c_2
+  # ?start_of_int_Diabetes_Type_I
+  # ?end_of_int_Diabetes_Type_I
+
+WHERE {
+
+  # =============[ 1 Month before|contains|overlaps|meets|finished_by HbA1c #2 > 10 ]=============
+
+  # Note: No direct constraint for this Allen statement was added, because at least one of the
+  #       two intervals is a duration. Relative temporal constraints will be handled at the end.
+
+  # Describing the interval "HbA1c #2":
+  ?int_HbA1c_2 a:hasConcept "HbA1c" .
+  ?int_HbA1c_2 a:hasPatient ?patient .
+  ?int_HbA1c_2 a:hasValue ?value_of_int_HbA1c_2 .
+  ?int_HbA1c_2 a:hasStartDateUnix ?unix_start_of_int_HbA1c_2 .
+  ?int_HbA1c_2 a:hasEndDateUnix ?unix_end_of_int_HbA1c_2 .
+  # ?int_HbA1c_2 a:hasStartDate ?start_of_int_HbA1c_2 .
+  # ?int_HbA1c_2 a:hasEndDate ?end_of_int_HbA1c_2 .
+
+  # Constraining the value of the interval "HbA1c #2":
+  FILTER (?value_of_int_HbA1c_2 > 10) .
+
+  # =============================[ 1 Month contains Diabetes Type I ]=============================
+
+  # Note: No direct constraint for this Allen statement was added, because at least one of the
+  #       two intervals is a duration. Relative temporal constraints will be handled at the end.
+
+  # Describing the interval "Diabetes Type I":
+  ?int_Diabetes_Type_I a:hasConcept "Diabetes Type I" .
+  ?int_Diabetes_Type_I a:hasPatient ?patient .
+  ?int_Diabetes_Type_I a:hasValue ?value_of_int_Diabetes_Type_I .
+  ?int_Diabetes_Type_I a:hasStartDateUnix ?unix_start_of_int_Diabetes_Type_I .
+  ?int_Diabetes_Type_I a:hasEndDateUnix ?unix_end_of_int_Diabetes_Type_I .
+  # ?int_Diabetes_Type_I a:hasStartDate ?start_of_int_Diabetes_Type_I .
+  # ?int_Diabetes_Type_I a:hasEndDate ?end_of_int_Diabetes_Type_I .
+
+  # Constraining the duration of interval "Diabetes Type I" to < 1 Month:
+  FILTER (?unix_end_of_int_Diabetes_Type_I - ?unix_start_of_int_Diabetes_Type_I < 2629800) .
+
+  # ===========================[ Diabetes Type I before HbA1c #2 > 10 ]===========================
+
+  ?int_Diabetes_Type_I a:before ?int_HbA1c_2 . 
+
+  # ================[ Constraints on relative intervals (derived with SageMath) ]================ 
+
+  FILTER (?unix_end_of_int_Diabetes_Type_I - ?unix_start_of_int_Diabetes_Type_I > 0) .
+  FILTER (-?unix_end_of_int_Diabetes_Type_I + ?unix_start_of_int_Diabetes_Type_I + 2629800 > 0) .
+
+  # ==================================[ Processing Exclusions ]================================== 
+
+  MINUS {
+
+    # ================[ 1 Month contains NO HbA1c #1 > 10 (Part of exclusion #1) ]================
+
+    # Note: No direct constraint for this Allen statement was added, because at least one of the
+    #       two intervals is a duration. Relative temporal constraints will be handled at the end.
+
+    # Describing the interval "HbA1c #1":
+    ?int_HbA1c_1_excl_1 a:hasConcept "HbA1c" .
+    ?int_HbA1c_1_excl_1 a:hasPatient ?patient .
+    ?int_HbA1c_1_excl_1 a:hasValue ?value_of_int_HbA1c_1_excl_1 .
+    ?int_HbA1c_1_excl_1 a:hasStartDateUnix ?unix_start_of_int_HbA1c_1_excl_1 .
+    ?int_HbA1c_1_excl_1 a:hasEndDateUnix ?unix_end_of_int_HbA1c_1_excl_1 .
+    # ?int_HbA1c_1_excl_1 a:hasStartDate ?start_of_int_HbA1c_1_excl_1 .
+    # ?int_HbA1c_1_excl_1 a:hasEndDate ?end_of_int_HbA1c_1_excl_1 .
+
+    # Constraining the value of the interval "HbA1c #1":
+    FILTER (?value_of_int_HbA1c_1_excl_1 > 10) .
+
+    # Constraining the duration of interval "HbA1c #1" to < 1 Month:
+    FILTER (?unix_end_of_int_HbA1c_1_excl_1 - ?unix_start_of_int_HbA1c_1_excl_1 < 2629800) .
+
+    # ===[ NO HbA1c #1 > 10 before|after|during|contains|overlaps|overlapped_by|meets|met_by|starts|started_by|finishes|finished_by|equals HbA1c #2 > 10 (Part of exclusion #1) ]===
+
+    ?int_HbA1c_1_excl_1 a:before|a:after|a:during|a:contains|a:overlaps|a:overlapped_by|a:meets|a:met_by|a:starts|a:started_by|a:finishes|a:finished_by|a:equals ?int_HbA1c_2_excl_1 . 
+
+    # Describing the interval "HbA1c #2":
+    ?int_HbA1c_2_excl_1 a:hasConcept "HbA1c" .
+    ?int_HbA1c_2_excl_1 a:hasPatient ?patient .
+    ?int_HbA1c_2_excl_1 a:hasValue ?value_of_int_HbA1c_2_excl_1 .
+    # ?int_HbA1c_2_excl_1 a:hasStartDate ?start_of_int_HbA1c_2_excl_1 .
+    # ?int_HbA1c_2_excl_1 a:hasEndDate ?end_of_int_HbA1c_2_excl_1 .
+
+    FILTER (?value_of_int_HbA1c_2_excl_1 > 10) .
+
+    # ===[ NO HbA1c #1 > 10 before|after|during|contains|overlaps|overlapped_by|meets|met_by|starts|started_by|finishes|finished_by|equals Diabetes Type I (Part of exclusion #1) ]===
+
+    ?int_HbA1c_1_excl_1 a:before|a:after|a:during|a:contains|a:overlaps|a:overlapped_by|a:meets|a:met_by|a:starts|a:started_by|a:finishes|a:finished_by|a:equals ?int_Diabetes_Type_I_excl_1 . 
+
+    # Describing the interval "Diabetes Type I":
+    ?int_Diabetes_Type_I_excl_1 a:hasConcept "Diabetes Type I" .
+    ?int_Diabetes_Type_I_excl_1 a:hasPatient ?patient .
+    ?int_Diabetes_Type_I_excl_1 a:hasStartDateUnix ?unix_start_of_int_Diabetes_Type_I_excl_1 .
+    ?int_Diabetes_Type_I_excl_1 a:hasEndDateUnix ?unix_end_of_int_Diabetes_Type_I_excl_1 .
+    # ?int_Diabetes_Type_I_excl_1 a:hasStartDate ?start_of_int_Diabetes_Type_I_excl_1 .
+    # ?int_Diabetes_Type_I_excl_1 a:hasEndDate ?end_of_int_Diabetes_Type_I_excl_1 .
+
+    # ===[ 1 Month before|contains|overlaps|meets|finished_by HbA1c #2 > 10 (Part of exclusion #1) ]===
+
+    # Note: No direct constraint for this Allen statement was added, because at least one of the
+    #       two intervals is a duration. Relative temporal constraints will be handled at the end.
+
+    # Constraining the value of the interval "HbA1c #2":
+
+    # ================[ 1 Month contains Diabetes Type I (Part of exclusion #1) ]================
+
+    # Note: No direct constraint for this Allen statement was added, because at least one of the
+    #       two intervals is a duration. Relative temporal constraints will be handled at the end.
+
+    # Constraining the duration of interval "Diabetes Type I" to < 1 Month:
+    FILTER (?unix_end_of_int_Diabetes_Type_I_excl_1 - ?unix_start_of_int_Diabetes_Type_I_excl_1 < 2629800) .
+
+    # ==============[ Diabetes Type I before HbA1c #2 > 10 (Part of exclusion #1) ]==============
+
+    ?int_Diabetes_Type_I_excl_1 a:before ?int_HbA1c_2_excl_1 . 
+
+    # ================[ Constraints on relative intervals (derived with SageMath) ]================ 
+
+    FILTER (?unix_end_of_int_HbA1c_1_excl_1 - ?unix_start_of_int_HbA1c_1_excl_1 > 0) .
+    FILTER (?unix_end_of_int_Diabetes_Type_I_excl_1 - ?unix_start_of_int_Diabetes_Type_I_excl_1 > 0) .
+    FILTER (-?unix_end_of_int_Diabetes_Type_I_excl_1 + ?unix_start_of_int_Diabetes_Type_I_excl_1 + 2629800 > 0) .
+    FILTER (-?unix_end_of_int_HbA1c_1_excl_1 + ?unix_start_of_int_Diabetes_Type_I_excl_1 + 2629800 > 0) .
+    FILTER (-?unix_end_of_int_Diabetes_Type_I_excl_1 + ?unix_start_of_int_HbA1c_1_excl_1 + 2629800 > 0) .
+    FILTER (-?unix_end_of_int_HbA1c_1_excl_1 + ?unix_start_of_int_HbA1c_1_excl_1 + 2629800 > 0) .
+
+  } # End of exclusions
+
+} ORDER BY ?patient

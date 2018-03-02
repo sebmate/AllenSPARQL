@@ -1,0 +1,106 @@
+PREFIX a: <https://www.imi.med.fau.de/AllenSparql/>
+
+SELECT DISTINCT ?patient
+
+  # To retrieve additional data, uncomment the variables and associated statements below,
+  # and execute this SPARQL code directly on the Fuseki server:
+
+  # ?end_of_int_TSH_1
+  # ?start_of_int_TSH_1
+  # ?value_of_int_TSH_1
+
+WHERE {
+
+  # ================================[ TSH #1 > 10 meets 1 Month ]================================
+
+  # Note: No direct constraint for this Allen statement was added, because at least one of the
+  #       two intervals is a duration. Relative temporal constraints will be handled at the end.
+
+  # Describing the interval "TSH #1":
+  ?int_TSH_1 a:hasConcept "TSH" .
+  ?int_TSH_1 a:hasPatient ?patient .
+  ?int_TSH_1 a:hasValue ?value_of_int_TSH_1 .
+  ?int_TSH_1 a:hasStartDateUnix ?unix_start_of_int_TSH_1 .
+  ?int_TSH_1 a:hasEndDateUnix ?unix_end_of_int_TSH_1 .
+  # ?int_TSH_1 a:hasStartDate ?start_of_int_TSH_1 .
+  # ?int_TSH_1 a:hasEndDate ?end_of_int_TSH_1 .
+
+  # Constraining the value of the interval "TSH #1":
+  FILTER (?value_of_int_TSH_1 > 10) .
+
+  # ================[ Constraints on relative intervals (derived with SageMath) ]================ 
+
+  FILTER (?unix_end_of_int_TSH_1 - ?unix_start_of_int_TSH_1 > 0) .
+
+  # ==================================[ Processing Exclusions ]================================== 
+
+  MINUS {
+
+    # ====================[ TSH #1 > 10 meets 1 Month (Part of exclusion #1) ]====================
+
+    # Note: No direct constraint for this Allen statement was added, because at least one of the
+    #       two intervals is a duration. Relative temporal constraints will be handled at the end.
+
+    # Describing the interval "TSH #1":
+    ?int_TSH_1_excl_1 a:hasConcept "TSH" .
+    ?int_TSH_1_excl_1 a:hasPatient ?patient .
+    ?int_TSH_1_excl_1 a:hasValue ?value_of_int_TSH_1_excl_1 .
+    ?int_TSH_1_excl_1 a:hasStartDateUnix ?unix_start_of_int_TSH_1_excl_1 .
+    ?int_TSH_1_excl_1 a:hasEndDateUnix ?unix_end_of_int_TSH_1_excl_1 .
+    # ?int_TSH_1_excl_1 a:hasStartDate ?start_of_int_TSH_1_excl_1 .
+    # ?int_TSH_1_excl_1 a:hasEndDate ?end_of_int_TSH_1_excl_1 .
+
+    # Constraining the value of the interval "TSH #1":
+    FILTER (?value_of_int_TSH_1_excl_1 > 10) .
+
+    # ====================[ TSH #1 > 10 before NO ICU (Part of exclusion #1) ]====================
+
+    ?int_TSH_1_excl_1 a:before ?int_ICU_excl_1 . 
+
+    # Describing the interval "ICU":
+    ?int_ICU_excl_1 a:hasConcept "ICU" .
+    ?int_ICU_excl_1 a:hasPatient ?patient .
+    ?int_ICU_excl_1 a:hasStartDateUnix ?unix_start_of_int_ICU_excl_1 .
+    ?int_ICU_excl_1 a:hasEndDateUnix ?unix_end_of_int_ICU_excl_1 .
+    # ?int_ICU_excl_1 a:hasStartDate ?start_of_int_ICU_excl_1 .
+    # ?int_ICU_excl_1 a:hasEndDate ?end_of_int_ICU_excl_1 .
+
+    # ================[ TSH #1 > 10 before NO TSH #2 > 10 (Part of exclusion #1) ]================
+
+    ?int_TSH_1_excl_1 a:before ?int_TSH_2_excl_1 . 
+
+    # Describing the interval "TSH #2":
+    ?int_TSH_2_excl_1 a:hasConcept "TSH" .
+    ?int_TSH_2_excl_1 a:hasPatient ?patient .
+    ?int_TSH_2_excl_1 a:hasValue ?value_of_int_TSH_2_excl_1 .
+    # ?int_TSH_2_excl_1 a:hasStartDate ?start_of_int_TSH_2_excl_1 .
+    # ?int_TSH_2_excl_1 a:hasEndDate ?end_of_int_TSH_2_excl_1 .
+
+    # Constraining the value of the interval "TSH #2":
+    FILTER (?value_of_int_TSH_2_excl_1 > 10) .
+
+    # =====================[ 1 Month contains NO ICU (Part of exclusion #1) ]=====================
+
+    # Note: No direct constraint for this Allen statement was added, because at least one of the
+    #       two intervals is a duration. Relative temporal constraints will be handled at the end.
+
+    # Constraining the duration of interval "ICU" to < 1 Month:
+    FILTER (?unix_end_of_int_ICU_excl_1 - ?unix_start_of_int_ICU_excl_1 < 2629800) .
+
+    # ===[ 1 Month before|contains|overlaps|meets|finished_by NO TSH #2 > 10 (Part of exclusion #1) ]===
+
+    # Note: No direct constraint for this Allen statement was added, because at least one of the
+    #       two intervals is a duration. Relative temporal constraints will be handled at the end.
+
+    # Constraining the value of the interval "TSH #2":
+
+    # ================[ Constraints on relative intervals (derived with SageMath) ]================ 
+
+    FILTER (?unix_end_of_int_TSH_1_excl_1 - ?unix_start_of_int_TSH_1_excl_1 > 0) .
+    FILTER (?unix_end_of_int_ICU_excl_1 - ?unix_start_of_int_ICU_excl_1 > 0) .
+    FILTER (-?unix_end_of_int_TSH_1_excl_1 + ?unix_start_of_int_ICU_excl_1 > 0) .
+    FILTER (-?unix_end_of_int_ICU_excl_1 + ?unix_end_of_int_TSH_1_excl_1 + 2629800 > 0) .
+
+  } # End of exclusions
+
+} ORDER BY ?patient

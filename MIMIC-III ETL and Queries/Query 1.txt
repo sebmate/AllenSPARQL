@@ -1,0 +1,41 @@
+PREFIX a: <https://www.imi.med.fau.de/AllenSparql/>
+
+SELECT DISTINCT ?patient
+
+  # To retrieve additional data, uncomment the variables and associated statements below,
+  # and execute this SPARQL code directly on the Fuseki server:
+
+  # ?start_of_int_HbA1c_1
+  # ?value_of_int_HbA1c_2
+  # ?value_of_int_HbA1c_1
+  # ?end_of_int_HbA1c_2
+  # ?end_of_int_HbA1c_1
+  # ?start_of_int_HbA1c_2
+
+WHERE {
+
+  # ============================[ HbA1c #1 > 10 before HbA1c #2 > 10 ]============================
+
+  ?int_HbA1c_1 a:before ?int_HbA1c_2 . 
+
+  # Describing the interval "HbA1c #1":
+  ?int_HbA1c_1 a:hasConcept "HbA1c" .
+  ?int_HbA1c_1 a:hasPatient ?patient .
+  ?int_HbA1c_1 a:hasValue ?value_of_int_HbA1c_1 .
+  # ?int_HbA1c_1 a:hasStartDate ?start_of_int_HbA1c_1 .
+  # ?int_HbA1c_1 a:hasEndDate ?end_of_int_HbA1c_1 .
+
+  # Describing the interval "HbA1c #2":
+  ?int_HbA1c_2 a:hasConcept "HbA1c" .
+  ?int_HbA1c_2 a:hasPatient ?patient .
+  ?int_HbA1c_2 a:hasValue ?value_of_int_HbA1c_2 .
+  # ?int_HbA1c_2 a:hasStartDate ?start_of_int_HbA1c_2 .
+  # ?int_HbA1c_2 a:hasEndDate ?end_of_int_HbA1c_2 .
+
+  # Constraining the value of the interval "HbA1c #1":
+  FILTER (?value_of_int_HbA1c_1 > 10) .
+
+  # Constraining the value of the interval "HbA1c #2":
+  FILTER (?value_of_int_HbA1c_2 > 10) .
+
+} ORDER BY ?patient
