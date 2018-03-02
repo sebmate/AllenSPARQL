@@ -178,7 +178,7 @@ public class i2b2Helper {
 
         simplified
                 = simplified
-                .replaceAll("[^A-Za-z0-9]", "_");
+                .replaceAll("[^A-Za-z0-9 ]", "_");
 
         return simplified;
     }

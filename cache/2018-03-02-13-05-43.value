@@ -1,0 +1,9 @@
+unix_end_of_int_1_Month == unix_start_of_int_1_Month + 2629800
+ max(unix_end_of_int_Diabetes_Type_I - 2629800, unix_end_of_int_HbA1c_1 - 2629800) < unix_start_of_int_1_Month
+ unix_start_of_int_1_Month < min(unix_start_of_int_Diabetes_Type_I, unix_start_of_int_HbA1c_1)
+ unix_end_of_int_HbA1c_1 - unix_start_of_int_HbA1c_1 > 0
+ unix_end_of_int_Diabetes_Type_I - unix_start_of_int_Diabetes_Type_I > 0
+ -unix_end_of_int_Diabetes_Type_I + unix_start_of_int_Diabetes_Type_I + 2629800 > 0
+ -unix_end_of_int_HbA1c_1 + unix_start_of_int_Diabetes_Type_I + 2629800 > 0
+ -unix_end_of_int_Diabetes_Type_I + unix_start_of_int_HbA1c_1 + 2629800 > 0
+ -unix_end_of_int_HbA1c_1 + unix_start_of_int_HbA1c_1 + 2629800 > 0

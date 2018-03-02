@@ -8,13 +8,21 @@ package de.unierlangen.med.imi.allensparql;
 import com.fasterxml.jackson.core.JsonParser;
 import com.google.gson.JsonElement;
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Hashtable;
+import java.util.Iterator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.IOUtils;
 import org.json.JSONObject;
 
 /**
@@ -27,9 +35,12 @@ class RelativeConstraintsProcessor {
     ArrayList<AllenStatement> allenStatements = new ArrayList<AllenStatement>();
 
     RelativeConstraintsProcessor(String Allen) {
-        String[] AllenStatementsInput = Allen.split(";");
+        this.Allen = Allen;
+        System.out.println("Processing relative temporal criteria for:\n" + Allen);
+        String[] AllenStatementsInput = Allen.split("\n");
+        //String[] AllenStatementsInput = Allen.split(";");
         for (int a = 0; a < AllenStatementsInput.length; a++) {
-            System.out.println(AllenStatementsInput[a]);
+            System.out.println("Statement: " + AllenStatementsInput[a]);
             AllenStatement as = new AllenStatement(AllenStatementsInput[a]);
             allenStatements.add(as);
         }
@@ -41,7 +52,6 @@ class RelativeConstraintsProcessor {
 
     String process() {
 
-        System.out.println();
         String variables = "";
         String unknowns = "";
         String equationSystem = "";
@@ -51,7 +61,7 @@ class RelativeConstraintsProcessor {
             AllenStatement as = allenStatements.get(a);
             as.toPreferred();
 
-           if ((as.getInterval1().isDuration() || as.getInterval2().isDuration())) {
+            if ((as.getInterval1().isDuration() || as.getInterval2().isDuration())) {
                 if (!as.getRelation().contains(",")) {
 
                     String interval1 = as.getInterval1().getIntervallNameSPARQL();
@@ -125,10 +135,11 @@ class RelativeConstraintsProcessor {
         equationSystem = removeLastTwoCharacter(cleanUp(equationSystem).replaceAll("\n", ", "));
         unknowns = removeLastTwoCharacter(cleanUp(unknowns).replace("\n", ", "));
 
+        String returnResult = "";
+
         if (equationSystem.equals("")) {
             return "";
         }
-
         return (cleanUp(variables) + "solve([" + equationSystem + "], [" + unknowns + "])").replaceAll("\n", "");
     }
 
@@ -146,6 +157,30 @@ class RelativeConstraintsProcessor {
     }
 
     String callSageMath(String query) {
+
+        // Search cache first:
+        File path = new File("cache");
+        File[] files = path.listFiles();
+        int numberOfFiles = files.length;
+        for (int i = 0; i < files.length; i++) {
+            if (files[i].isFile() && files[i].toString().contains(".key")) {
+                //System.out.println(files[i]);
+                try (FileInputStream inputStream = new FileInputStream(files[i].toString())) {
+                    String cacheString = IOUtils.toString(inputStream);
+                    if (cacheString.equals(query)) {
+                        try (FileInputStream inputStream2 = new FileInputStream(files[i].toString().replaceAll(".key", ".value"))) {
+                            String cacheString2 = IOUtils.toString(inputStream2);
+
+                            return cacheString2;
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }
 
         if (query.equals("")) {
             return "";
@@ -170,11 +205,11 @@ class RelativeConstraintsProcessor {
                 sageResult += line;
             }
 
-            System.out.println("Result from SageCell:\n");
-            
-            JSONObject json = new JSONObject(sageResult); 
-            System.out.println(json.toString(3)); 
-            
+            System.out.println("Result from SageCell (orig): "+sageResult+"\n");
+            JSONObject json = new JSONObject(sageResult);
+            System.out.println(json.toString(3));
+            System.out.println("Result from SageCell (JSON): "+json+"\n");
+
             System.out.println("");
 
             Matcher m = Pattern.compile("\\[\\[(.*?)\\]\\]").matcher(sageResult);
@@ -207,6 +242,22 @@ class RelativeConstraintsProcessor {
 
         } catch (Exception ex) {
             ex.printStackTrace();
+        }
+
+        String timeStamp = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss").format(new Date());
+        //timeStamp += "-" + ++numberOfFiles;
+
+        try (PrintWriter writer = new PrintWriter("cache/" + timeStamp + ".key", "UTF-8")) {
+            writer.print(query);
+            writer.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try (PrintWriter writer = new PrintWriter("cache/" + timeStamp + ".value", "UTF-8")) {
+            writer.print(finalResult2);
+            writer.close();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
         return finalResult2;

@@ -78,17 +78,17 @@ class IntervalDescription {
     private String intervalName = "";
     private String enumerator = "";
     private String itemType = "";
-    private int durationSeconds = 0;
+    private long durationSeconds = 0;
 
     public IntervalDescription(String string) {
 
         origDescription = string;
         description = origDescription;
-        description = description.replaceAll("> ", ">");
-        description = description.replaceAll("= ", "=");
-        description = description.replaceAll("< ", "<");
-        description = description.replaceAll("! ", "!");
-        description = description.replaceAll("  ", " ");
+        // description = description.replaceAll("> ", ">");
+        // description = description.replaceAll("= ", "=");
+        // description = description.replaceAll("< ", "<");
+        // description = description.replaceAll("! ", "!");
+        // description = description.replaceAll("  ", " ");
 
         String[] items = description.split(" ");
 
@@ -96,7 +96,7 @@ class IntervalDescription {
             occuranceModifier = items[0];
         }
 
-        if (items[0].equals("NO")) {
+        if (items[0].trim().equals("NO")) {
             occuranceModifier = "NO";
         }
 
@@ -231,6 +231,8 @@ class IntervalDescription {
     }
 
     public boolean isNegation() {
+        //System.out.println(occuranceModifier);
+
         if (occuranceModifier.equals("NO")) {
             return true;
         }
@@ -306,7 +308,7 @@ class IntervalDescription {
     /**
      * @return the durationSeconds
      */
-    public int getDurationSeconds() {
+    public long getDurationSeconds() {
         return durationSeconds;
     }
 

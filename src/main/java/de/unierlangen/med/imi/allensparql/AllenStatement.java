@@ -14,12 +14,13 @@ class AllenStatement {
     private IntervalDescription interval1;
     private IntervalDescription interval2;
     private String relation = "";
+    private final String statementString;
  
 
     AllenStatement(String in) {
+        this.statementString = in;
         String[] AllenStatement = in.replaceAll("\\]", ";").replaceAll("\\[", ";").split(";");
         this.relation = AllenStatement[1].trim().replaceAll(" ", "_");
-
         interval1 = new IntervalDescription(AllenStatement[0].trim());
         interval2 = new IntervalDescription(AllenStatement[2].trim());
     }
@@ -156,5 +157,12 @@ class AllenStatement {
                 System.out.println("Error: Unknown temporal relation '" + this.relation + "'");
                 break;
         }
+    }
+
+    /**
+     * @return the statementString
+     */
+    public String getStatementString() {
+        return statementString;
     }
 }

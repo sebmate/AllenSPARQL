@@ -156,7 +156,6 @@ public class MainForm extends javax.swing.JFrame {
                     updateTripleCount();
                     LoadingInfo.setVisible(false);
                 } catch (Exception v) {
-                    System.out.println("Lalala");
                     v.printStackTrace();
                 }
             }
@@ -483,11 +482,11 @@ public class MainForm extends javax.swing.JFrame {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(54, 54, 54)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                         .addComponent(aggThrsLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(linkThreshold, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                         .addComponent(UncThrsLabel)
@@ -516,15 +515,16 @@ public class MainForm extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel7)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(171, 171, 171)
+                                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
@@ -594,6 +594,7 @@ public class MainForm extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
@@ -621,22 +622,21 @@ public class MainForm extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(tripleCount)
                                 .addGap(18, 18, 18)
-                                .addComponent(patientCount))
-                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(autoRunSPARQL)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(querySimplified)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(explainPlan)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(runSPARQL, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(TranslatorStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jScrollPane3)
-                        .addComponent(jScrollPane1)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(patientCount)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jScrollPane3)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(autoRunSPARQL)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(querySimplified)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(explainPlan)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(runSPARQL, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(TranslatorStatus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -675,7 +675,7 @@ public class MainForm extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(autoRunSPARQL)
@@ -1247,7 +1247,9 @@ public class MainForm extends javax.swing.JFrame {
         }
         String s = "";
         try {
+  
             QueryExecution q = QueryExecutionFactory.sparqlService(serviceURI, query);
+            //q.setTimeout(60, TimeUnit.MINUTES);
             ResultSet results = q.execSelect();
             while (results.hasNext()) {
                 QuerySolution soln = results.nextSolution();
@@ -1288,11 +1290,12 @@ public class MainForm extends javax.swing.JFrame {
             return;
         }
         try {
-            Model results = QueryExecutionFactory.sparqlService(serviceURI1, query).execConstruct();
+            QueryExecution exec = QueryExecutionFactory.sparqlService(serviceURI1, query);
+            //exec.setTimeout(60, TimeUnit.MINUTES);
+            Model results = exec.execConstruct();
             DatasetAccessor accessor = DatasetAccessorFactory.createHTTP(serviceURI2);
             accessor.add(results);
             results.close();
-
         } catch (Exception e) {
             e.printStackTrace();
             handleSparqlNotReady();
@@ -1304,10 +1307,14 @@ public class MainForm extends javax.swing.JFrame {
             return;
         }
         try {
-            Model results = QueryExecutionFactory.sparqlService(serviceURI1, query).execConstruct();
+            QueryExecution exec = QueryExecutionFactory.sparqlService(serviceURI1, query);
+            //exec.setTimeout(60, TimeUnit.MINUTES);
+            Model results = exec.execConstruct();
+
             DatasetAccessor accessor = DatasetAccessorFactory.createHTTP(serviceURI2);
             accessor.putModel(results);
             results.close();
+            
         } catch (Exception e) {
             e.printStackTrace();
             handleSparqlNotReady();
@@ -1413,12 +1420,12 @@ public class MainForm extends javax.swing.JFrame {
     private void runCreateSimplified() {
         String sparql = readFile("SPARQL/SimplifyDur.rq");
         log("Creating simplified 'dur' and 'con' relations ... ");
-        System.out.println(sparql);
+        //System.out.println(sparql);
         execConstructAndAdd("http://localhost:3030/i2b2", "http://localhost:3030/i2b2", sparql);
         updateTripleCount();
         sparql = readFile("SPARQL/SimplifyAft.rq");
         log("Creating simplified 'aft' and 'bef' relations ... ");
-        System.out.println(sparql);
+        //System.out.println(sparql);
         execConstructAndAdd("http://localhost:3030/i2b2", "http://localhost:3030/i2b2", sparql);
         updateTripleCount();
     }
@@ -1444,6 +1451,7 @@ public class MainForm extends javax.swing.JFrame {
 
         log("Processing new query: \n\n" + Allen.replaceAll(";", "\n") + "");
 
+        /*        
         String relativeTemporalCriteria = "";
 
         // Derive relative constraints:
@@ -1468,12 +1476,11 @@ public class MainForm extends javax.swing.JFrame {
                             + "  #        intervals\" SPARQL section. Please check for invalid temporal patterns involving\n"
                             + "  #        duration intervals (e.g. \"3 Months\" during \"2 Months\")!";
                 }
-
             } else {
                 log("There are no relative temporal constraints in this query.\n");
             }
-
         }
+        */
 
         // Generate and execute SPARQL:
         patientCount.setText("Patients: unknown");
@@ -1485,10 +1492,10 @@ public class MainForm extends javax.swing.JFrame {
                 System.out.println("Allen: " + Allen);
                 SPARQLTranslator translator = new SPARQLTranslator(Allen);
                 System.out.println();
-                translator.setRelativeConstraints(relativeTemporalCriteria);
+                //translator.setRelativeConstraints(relativeTemporalCriteria);
                 SPARQLQuery = translator.translate();
                 log("... Done!");
-                
+
                 if (!SPARQLQuery.trim().equals("") && !SPARQLQuery.equals(";")) {
                     SPARQLcode.setText(SPARQLQuery.trim());
 
@@ -1515,6 +1522,7 @@ public class MainForm extends javax.swing.JFrame {
         if (SPARQLQuery.contains("ERROR: ")) {
             TranslatorStatus.setText("SPARQL ERROR");
             TranslatorStatus.setBackground(Color.RED);
+            JOptionPane.showMessageDialog(null, "Error while generating the SPARQL code.\nPlease check the SPARQL code for the error(s)!", "SPARQL Code Generator Error", JOptionPane.ERROR_MESSAGE);
         }
         if (TranslatorStatus.getText().equals("WORKING")) {
             TranslatorStatus.setText("READY");
