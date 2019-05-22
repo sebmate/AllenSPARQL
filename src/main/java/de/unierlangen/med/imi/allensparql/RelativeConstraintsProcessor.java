@@ -14,11 +14,14 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Hashtable;
 import java.util.Iterator;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.apache.commons.io.FileUtils;
@@ -165,10 +168,10 @@ class RelativeConstraintsProcessor {
         for (int i = 0; i < files.length; i++) {
             if (files[i].isFile() && files[i].toString().contains(".key")) {
                 //System.out.println(files[i]);
-                try (FileInputStream inputStream = new FileInputStream(files[i].toString())) {
+                try ( FileInputStream inputStream = new FileInputStream(files[i].toString())) {
                     String cacheString = IOUtils.toString(inputStream);
                     if (cacheString.equals(query)) {
-                        try (FileInputStream inputStream2 = new FileInputStream(files[i].toString().replaceAll(".key", ".value"))) {
+                        try ( FileInputStream inputStream2 = new FileInputStream(files[i].toString().replaceAll(".key", ".value"))) {
                             String cacheString2 = IOUtils.toString(inputStream2);
 
                             return cacheString2;
@@ -192,23 +195,40 @@ class RelativeConstraintsProcessor {
         String finalResult = "";
         String finalResult2 = "";
 
+        PrintWriter writer3;
+        try {
+            if (System.getProperty("os.name").contains("Windows")) {
+                writer3 = new PrintWriter("callSageCell.bat", "UTF-8");
+            } else {
+                writer3 = new PrintWriter("callSageCell.sh", "UTF-8");
+            }
+            writer3.println(execString);
+            writer3.close();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
         System.out.println(execString);
 
         try {
+            Process proc = null;
+            if (System.getProperty("os.name").contains("Windows")) {
+                proc = Runtime.getRuntime().exec(execString);
+            } else {
+                proc = Runtime.getRuntime().exec("sh callSageCell.sh");
+            }
 
-            Process proc = Runtime.getRuntime().exec(execString);
             String line = "";
-            BufferedReader reader1
-                    = new BufferedReader(new InputStreamReader(proc.getInputStream()));
+            BufferedReader reader1 = new BufferedReader(new InputStreamReader(proc.getInputStream()));
 
             while ((line = reader1.readLine()) != null) {
                 sageResult += line;
             }
 
-            System.out.println("Result from SageCell (orig): "+sageResult+"\n");
+            System.out.println("Result from SageCell (orig): " + sageResult + "\n");
             JSONObject json = new JSONObject(sageResult);
             System.out.println(json.toString(3));
-            System.out.println("Result from SageCell (JSON): "+json+"\n");
+            System.out.println("Result from SageCell (JSON): " + json + "\n");
 
             System.out.println("");
 
@@ -247,13 +267,13 @@ class RelativeConstraintsProcessor {
         String timeStamp = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss").format(new Date());
         //timeStamp += "-" + ++numberOfFiles;
 
-        try (PrintWriter writer = new PrintWriter("cache/" + timeStamp + ".key", "UTF-8")) {
+        try ( PrintWriter writer = new PrintWriter("cache/" + timeStamp + ".key", "UTF-8")) {
             writer.print(query);
             writer.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
-        try (PrintWriter writer = new PrintWriter("cache/" + timeStamp + ".value", "UTF-8")) {
+        try ( PrintWriter writer = new PrintWriter("cache/" + timeStamp + ".value", "UTF-8")) {
             writer.print(finalResult2);
             writer.close();
         } catch (Exception e) {
