@@ -372,7 +372,7 @@ public class MainForm extends javax.swing.JFrame {
                 {null, null, null}
             },
             new String [] {
-                "Original name", "New name", "Aggregation threshold (s)"
+                "Original name", "New name", "Abstraction threshold (s)"
             }
         ) {
             Class[] types = new Class [] {
@@ -392,7 +392,7 @@ public class MainForm extends javax.swing.JFrame {
         jScrollPane2.setViewportView(configTable);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel7.setText("Temporal aggregation and uncertainty handling");
+        jLabel7.setText("Temporal abstraction and uncertainty handling");
 
         addRow.setText("+");
         addRow.addActionListener(new java.awt.event.ActionListener() {
@@ -412,7 +412,7 @@ public class MainForm extends javax.swing.JFrame {
 
         noAgg.setBackground(java.awt.Color.lightGray);
         noAgg.setSelected(true);
-        noAgg.setText("No aggregation");
+        noAgg.setText("No abstraction");
         noAgg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 noAggActionPerformed(evt);
@@ -420,7 +420,7 @@ public class MainForm extends javax.swing.JFrame {
         });
 
         simpleAgg.setBackground(java.awt.Color.lightGray);
-        simpleAgg.setText("Simple aggregation");
+        simpleAgg.setText("Simple abstraction");
         simpleAgg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 simpleAggActionPerformed(evt);
@@ -428,7 +428,7 @@ public class MainForm extends javax.swing.JFrame {
         });
 
         complexAgg.setBackground(java.awt.Color.lightGray);
-        complexAgg.setText("Complex aggregation");
+        complexAgg.setText("Complex abstraction");
         complexAgg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 complexAggActionPerformed(evt);
@@ -474,7 +474,7 @@ public class MainForm extends javax.swing.JFrame {
         UncThrsLabel.setText("Uncertainty threshold (s):");
 
         aggThrsLabel.setBackground(java.awt.Color.lightGray);
-        aggThrsLabel.setText("Aggregation threshold (s):");
+        aggThrsLabel.setText("Abstraction threshold (s):");
         aggThrsLabel.setEnabled(false);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -830,7 +830,7 @@ public class MainForm extends javax.swing.JFrame {
 
     private void addRowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addRowActionPerformed
         String data1 = "A";
-        String data2 = "A Agg";
+        String data2 = "A Abs";
         String data3 = "60*60*24";
         Object[] row = {data1, data2, data3};
         DefaultTableModel model = (DefaultTableModel) configTable.getModel();

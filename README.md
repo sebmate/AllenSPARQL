@@ -4,9 +4,6 @@ AllenSPARQL is an RDF- and SPARQL based temporal phenotyping engine. It can be u
 
 The program is based on Allen's interval algebra, which has been described in Allen, James F. "Maintaining knowledge about temporal intervals." Communications of the ACM 26.11 (1983): 832-843.
 
-For information on how to build the source code, please follow INSTALLATION.txt.
-
-This package also contains a small test data set. A description on how to use this is contained in the "Test Dataset" subdirectory.
-
+For information on how to build the source code and how to play around with the small demo dataset, please follow "Quick Start Guide.docx".
 
 ![Screenshot](Screenshot.png)

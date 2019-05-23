@@ -1,1 +1,1 @@
-B Agg [overlaps] A Agg
+A Abs [overlaps] B Abs

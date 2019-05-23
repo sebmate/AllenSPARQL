@@ -33,6 +33,11 @@
 		<artifactId>slf4j-simple</artifactId>
 		<version>1.6.1</version>
 	</dependency>
+<dependency>
+    <groupId>org.apache.jena</groupId>
+    <artifactId>jena-arq</artifactId>
+    <version>3.11.0</version>
+</dependency>
         <dependency>
             <groupId>d2rq</groupId>
             <artifactId>d2rq</artifactId>

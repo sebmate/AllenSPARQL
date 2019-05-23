@@ -451,7 +451,7 @@
                   <Table columnCount="3" rowCount="4">
                     <Column editable="true" title="Original name" type="java.lang.String"/>
                     <Column editable="true" title="New name" type="java.lang.String"/>
-                    <Column editable="true" title="Aggregation threshold (s)" type="java.lang.String"/>
+                    <Column editable="true" title="Abstraction threshold (s)" type="java.lang.String"/>
                   </Table>
                 </Property>
                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
@@ -489,7 +489,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="11" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Temporal aggregation and uncertainty handling"/>
+            <Property name="text" type="java.lang.String" value="Temporal abstraction and uncertainty handling"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="addRow">
@@ -549,7 +549,7 @@
                   <Color blue="c0" green="c0" id="lightGray" palette="1" red="c0" type="palette"/>
                 </Property>
                 <Property name="selected" type="boolean" value="true"/>
-                <Property name="text" type="java.lang.String" value="No aggregation"/>
+                <Property name="text" type="java.lang.String" value="No abstraction"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="noAggActionPerformed"/>
@@ -560,7 +560,7 @@
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="c0" green="c0" id="lightGray" palette="1" red="c0" type="palette"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Simple aggregation"/>
+                <Property name="text" type="java.lang.String" value="Simple abstraction"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="simpleAggActionPerformed"/>
@@ -571,7 +571,7 @@
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="c0" green="c0" id="lightGray" palette="1" red="c0" type="palette"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Complex aggregation"/>
+                <Property name="text" type="java.lang.String" value="Complex abstraction"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="complexAggActionPerformed"/>
@@ -652,7 +652,7 @@
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="c0" green="c0" id="lightGray" palette="1" red="c0" type="palette"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Aggregation threshold (s):"/>
+                <Property name="text" type="java.lang.String" value="Abstraction threshold (s):"/>
                 <Property name="enabled" type="boolean" value="false"/>
               </Properties>
             </Component>

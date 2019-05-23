@@ -77,6 +77,7 @@ public class dbHelper {
                 System.out.println(e);
                 System.exit(1);
             }
+            DriverManager.setLoginTimeout(1);
             conn = DriverManager.getConnection(getUrl(), getUser(), getPassword());
         } catch (SQLException ex) {
             Logger.getLogger(dbHelper.class.getName()).log(Level.SEVERE, null, ex);
