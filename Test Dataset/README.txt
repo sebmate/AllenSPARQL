@@ -93,7 +93,8 @@ Querying data
 To automatically run queries in AllenSPARQL, select "Automatically run SPARQL queries" 
 on the left bottom.
 
-To query the data, start AllenGUI from within AllenSPARQL's root directory. Create two new intervals, or rename the existing ones to "A Agg" and "B Agg". Using AllenGUI is simple:
+To query the data, start AllenGUI from within AllenSPARQL's root directory. Create two new
+intervals, or rename the existing ones to "A Agg" and "B Agg". Using AllenGUI is simple:
    
    - To create a new intervall or connector: Left-click and drag the left mouse button
    - To delete an interval: Right-click on the interval
