@@ -1,1 +1,1 @@
-A Abs [overlaps] B Abs
+A Abs [equals] 3 Days
